@@ -98,7 +98,7 @@ public class OKTASevlet extends HttpServlet {
 					writer.println("<h4> " + attribute.getName() + ":  " + value + "</h4>");
 
 				});
-
+				request.getRequestDispatcher("/logout.jsp").include(request, servletResponse);
 			} else {
 
 				throw new ValidationException("Signature doesn't match.");
